@@ -6,9 +6,8 @@ const indexPage = () => {
   return (
     <Container maxW="container.xl" p={0}>
       <Flex h="100vh" py={20}>
-        <Cart/>
-        
         <Details />
+        <Cart/>
       </Flex>
     </Container>
   );
