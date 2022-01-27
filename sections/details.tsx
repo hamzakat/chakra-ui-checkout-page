@@ -48,7 +48,7 @@ const Details = () => {
                 </GridItem>
 
                 {/* Country */}
-                <GridItem colSpan={colSpan}>
+                <GridItem colSpan={2}>
                     <FormControl>
                         <FormLabel>Country</FormLabel>
                         <Select>
@@ -60,12 +60,12 @@ const Details = () => {
                 </GridItem>
                 
                 {/* Agreement */}
-                <GridItem colSpan={colSpan}>
+                <GridItem colSpan={2}>
                     <Checkbox defaultChecked>Ship to the billing address.</Checkbox>
                 </GridItem>
 
                 {/* Order btn */}
-                <GridItem colSpan={colSpan}>
+                <GridItem colSpan={2}>
                     <Button size="lg" color="Blue" w="full">Order</Button>
                 </GridItem>
             </SimpleGrid>
