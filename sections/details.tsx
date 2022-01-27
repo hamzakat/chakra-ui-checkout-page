@@ -1,7 +1,8 @@
-import { Button, Checkbox, FormControl, FormLabel, GridItem, Heading, Input, Select, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Button, Checkbox, FormControl, FormLabel, GridItem, Heading, Input, Select, SimpleGrid, Text, useBreakpointValue, VStack } from "@chakra-ui/react";
 
 
 const Details = () => {
+    const colSpan = useBreakpointValue({base: 2, md: 1})
     return (
         <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
             
@@ -15,7 +16,7 @@ const Details = () => {
             </VStack>
             <SimpleGrid columns={2} columnGap={3} rowGap={6} w="full">
                 {/* First Name */}
-                <GridItem colSpan={1}>
+                <GridItem colSpan={colSpan}>
                     <FormControl>
                         <FormLabel>First Name</FormLabel>
                         <Input placeholder="Ahmad"/>
@@ -23,7 +24,7 @@ const Details = () => {
                 </GridItem>
 
                 {/* Last Name */}
-                <GridItem colSpan={1}>
+                <GridItem colSpan={colSpan}>
                     <FormControl>
                         <FormLabel>Last Name</FormLabel>
                         <Input placeholder="Ahmad"/>
@@ -31,7 +32,7 @@ const Details = () => {
                 </GridItem>
 
                 {/* Address */}
-                <GridItem colSpan={2}>
+                <GridItem colSpan={colSpan}>
                     <FormControl>
                         <FormLabel>Address</FormLabel>
                         <Input placeholder="Rahma Street 210"/>
@@ -39,7 +40,7 @@ const Details = () => {
                 </GridItem>
 
                 {/* City */}
-                <GridItem colSpan={1}>
+                <GridItem colSpan={colSpan}>
                     <FormControl>
                         <FormLabel>City</FormLabel>
                         <Input placeholder="Istanbul"/>
@@ -47,7 +48,7 @@ const Details = () => {
                 </GridItem>
 
                 {/* Country */}
-                <GridItem colSpan={1}>
+                <GridItem colSpan={colSpan}>
                     <FormControl>
                         <FormLabel>Country</FormLabel>
                         <Select>
@@ -59,12 +60,12 @@ const Details = () => {
                 </GridItem>
                 
                 {/* Agreement */}
-                <GridItem colSpan={2}>
+                <GridItem colSpan={colSpan}>
                     <Checkbox defaultChecked>Ship to the billing address.</Checkbox>
                 </GridItem>
 
                 {/* Order btn */}
-                <GridItem colSpan={2}>
+                <GridItem colSpan={colSpan}>
                     <Button size="lg" color="Blue" w="full">Order</Button>
                 </GridItem>
             </SimpleGrid>

@@ -20,7 +20,7 @@ const indexPage = () => {
       <Stack alignItems="center" justifyContent="space-around" py={1}>
         <Button onClick={toggleColorMode}>🌓 Mode</Button>
       </Stack>
-      <Flex h="100vh" py={10}>
+      <Flex h={{base: 'auto', md: '100vh'}} py={[0, 10, 20]} direction={{base: 'column-reverse', md: 'row'}}>
         <Details />
         <Cart cartBg={cartBg} cartSecondTextColor={cartSecondTextColor}/>
       </Flex>
